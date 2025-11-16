@@ -2,7 +2,7 @@ from flask import Flask, send_from_directory, jsonify, send_file
 import os, io, zipfile
 
 app = Flask(__name__)
-UPLOAD_FOLDER = "NeoPass"
+UPLOAD_FOLDER = "Files"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 
