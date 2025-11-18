@@ -2,7 +2,7 @@ from flask import Flask, send_from_directory, jsonify, send_file
 import os, io, zipfile
 
 app = Flask(__name__)
-UPLOAD_FOLDER = "Files"
+UPLOAD_FOLDER = "./Files"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 
@@ -43,5 +43,6 @@ def index():
     })
 
 if __name__ == "__main__":
+    #app.run(host="127.0.0.1", port = "5000")
     port = int(os.environ.get("PORT", 10000)) 
     app.run(host="0.0.0.0", port=port)
